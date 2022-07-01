@@ -9,35 +9,53 @@ import { ChartOptions, ChartType } from "chart.js";
 export class HorizantalbarchartComponent implements OnInit {
   public currentBarChartOptions: ChartOptions = {
     responsive: true,
+    scales: {
+      xAxes: [{
+        ticks: {
+          beginAtZero: true,
+          min: 0
+        }
+      }]
+    },
     title: {
       display: true,
       text: "Current",
+      position: "bottom"
     },
   };
   public recommededBarChartOptions: ChartOptions = {
     responsive: true,
+    scales: {
+      xAxes: [{
+        ticks: {
+          beginAtZero: true,
+          min: 0
+        }
+      }]
+    },
     title: {
       display: true,
       text: "Recommended",
+      position: "bottom"
     },
   };
   public barChartType: any = "horizontalBar";
   public barChartLegend = false;
 
   public recommededBarChartData: any[] = [
-    { data: [10, 20, 30, 40], label: "SL1" },
+    { data: [20, 20, 30, 40], label: "SL1" },
     { data: [19, 25, 33, 45], label: "SL2" },
     { data: [12, 23, 39, 70], label: "SL3" },
     { data: [22, 29, 35, 55], label: "SL4" },
-    { data: [42, 44, 32, 65], label: "SL4" },
+    { data: [42, 44, 32, 65], label: "SL5" },
   ];
 
   public currentBarChartData: any[] = [
-    { data: [10, 20, 30, 40], label: "SL1" },
+    { data: [20, 20, 30, 40], label: "SL1" },
     { data: [19, 25, 33, 45], label: "SL2" },
     { data: [12, 23, 39, 70], label: "SL3" },
     { data: [22, 29, 35, 55], label: "SL4" },
-    { data: [42, 44, 32, 65], label: "SL4" },
+    { data: [42, 44, 32, 65], label: "SL5" },
   ];
 
   public barChartLabels: string[] = [
