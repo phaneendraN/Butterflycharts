@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ChartOptions, ChartType } from "chart.js";
-import ChartDataLabels from 'chartjs-plugin-datalabels';
+import ChartDataLabels from "chartjs-plugin-datalabels";
 
 @Component({
   selector: "app-horizantalbarchart",
@@ -13,16 +13,19 @@ export class HorizantalbarchartComponent implements OnInit {
     tooltips: {
       mode: "nearest",
     },
-    // plugins: [
-    //   ChartDataLabels
-    // ],
-    plugins: {
-      datalabels: {
-        formatter:  function(value, context) {
-          return value + '%';
-        }
-      }
-    },
+    plugins: [ChartDataLabels],
+    // plugins: {
+    //   datalabels: {
+    //     anchor: 'end',
+    //     align: 'cdnter',
+    //     font: {
+    //       size: 20,
+    //     },
+    //    formatter:  function(value, context) {
+    //      return value + '%';
+    //    }
+    //  }
+    // },
     scales: {
       yAxes: [
         {
@@ -31,7 +34,7 @@ export class HorizantalbarchartComponent implements OnInit {
           barThickness: 12,
           maxBarThickness: 15,
           minBarLength: 5,
-        }
+        },
       ],
       xAxes: [
         {
@@ -39,7 +42,6 @@ export class HorizantalbarchartComponent implements OnInit {
             beginAtZero: true,
             min: 0,
           },
-
         },
       ],
     },
@@ -51,14 +53,19 @@ export class HorizantalbarchartComponent implements OnInit {
   };
   public recommededBarChartOptions: any = {
     responsive: true,
-    plugins: {
-      // ChartDataLabels,
-      datalabels: {
-        formatter:  function(value, context) {
-          return value + '%';
-        }
-      }
-    },
+    plugins: [ChartDataLabels],
+    //   plugins: {
+    //     datalabels: {
+    //       anchor: 'end',
+    //       align: 'cdnter',
+    //       font: {
+    //         size: 20,
+    //       },
+    //      formatter:  function(value, context) {
+    //        return value + '%';
+    //      }
+    //    }
+    //  },
     scales: {
       yAxes: [
         {
@@ -67,7 +74,7 @@ export class HorizantalbarchartComponent implements OnInit {
           barThickness: 12,
           maxBarThickness: 15,
           minBarLength: 5,
-        }
+        },
       ],
       xAxes: [
         {
@@ -104,16 +111,11 @@ export class HorizantalbarchartComponent implements OnInit {
   ];
 
   public currentBarChartData: any[] = [
-    { data: [20, 20, 30, 40], label: "SL1",
-                    },
-    { data: [19, 25, 33, 45], label: "SL2",
-                    },
-    { data: [12, 23, 39, 70], label: "SL3",
-                    },
-    { data: [22, 29, 35, 55], label: "SL4",
-                    },
-    { data: [42, 44, 32, 65], label: "SL5" ,
-                    categoryPercentage: 10.0,},
+    { data: [20, 20, 30, 40], label: "SL1" },
+    { data: [19, 25, 33, 45], label: "SL2" },
+    { data: [12, 23, 39, 70], label: "SL3" },
+    { data: [22, 29, 35, 55], label: "SL4" },
+    { data: [42, 44, 32, 65], label: "SL5", categoryPercentage: 10.0 },
   ];
 
   public barChartLabels: string[] = [
