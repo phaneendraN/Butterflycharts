@@ -6,17 +6,25 @@ import { AppComponent } from './app.component';
 import { HighchartsChartComponent } from 'highcharts-angular';
 import { ButterflychartComponent } from './components/butterflychart/butterflychart.component';
 import { ProgressbarComponent } from './components/progressbar/progressbar.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { ChartsModule } from 'ng4-charts';
+import { HorizantalbarchartComponent } from './components/horizantalbarchart/horizantalbarchart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HighchartsChartComponent,
     ButterflychartComponent,
-    ProgressbarComponent
+    ProgressbarComponent,
+    HorizantalbarchartComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    CommonModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

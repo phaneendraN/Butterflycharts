@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-12">
+    <div class="text-center">
+      <h4>Band Mix</h4>
+    </div>
+  </div>
+  <div class="col-6">
+    <div style="height: 100%;width:100%; display: block;">
+      <canvas baseChart [datasets]="recommededBarChartData" [labels]="barChartLabels" [options]="recommededBarChartOptions"
+        [legend]="barChartLegend" [chartType]="barChartType"></canvas>
+    </div>
+  </div>
+  <div class="col-6">
+    <div style="height: 100%;width:100%; display: block;">
+      <canvas baseChart [datasets]="currentBarChartData" [labels]="barChartLabels" [options]="currentBarChartOptions"
+        [legend]="barChartLegend" [chartType]="barChartType"></canvas>
+    </div>
+  </div>
+</div>
